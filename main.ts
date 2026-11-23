@@ -52,4 +52,4 @@ default:throw 5}
 }}catch(err){return e(err)}
 }
 const I=process.env.MAKEFUN_INPUT_DIR??'/input',O=process.env.MAKEFUN_OUTPUT_DIR??'/output';
-for(const id of d(I).sort()){const r=R(F(I+'/'+id+'/program.bin'),F(I+'/'+id+'/input.bin'));M(O+'/'+id,{recursive:true});W(O+'/'+id+'/stdout.bin',r.b);W(O+'/'+id+'/exit.txt',r.c+'\n')}
+for(const id of d(I).sort()){const r=R(F(I+'/'+id+'/program.bin'),F(I+'/'+id+'/input.bin')),B=O+'/'+id;M(B,{recursive:true});W(B+'/stdout.bin',r.b);W(B+'/exit.txt',r.c+'\n')}
